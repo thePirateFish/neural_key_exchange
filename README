@@ -1,0 +1,47 @@
+Author: Matthew Gigliotti
+Fall 2018
+
+A demonstration of Tree Parity Machine synchronization.
+
+This project contains an implementation of the Tree Parity Machine structure
+as a PyTorch module. Ideally, this implementation may be built upon to fully 
+utilize the scalability PyTorch provides. 
+
+synch.py may be altered to test the synchronization process with different
+parameters.
+
+In the Jupyter Notebook, we can look at plots that describe the synchronization
+process, and compare different learning rules and settings for K, N, and L.
+
+See https://en.wikipedia.org/wiki/Neural_cryptography for a good description
+of the TPM synchronization protocol.
+
+A note about this implementation: Anti-Hebbian learning appears to be
+disproportionately inefficient compared to Hebbian/Random Walk learning in 
+regard to learning iterations needed for synchronization. Also, unexpected
+behavior has been noted for certain settings, such as k=4 and n=100. It is 
+unclear if this can be attributed to a bug in the code.
+
+Credit to the author of https://github.com/farizrahman4u/neuralkey, who's 
+synchronization measurements (% synchronized) I based mine off of. 
+
+A list of relevant papers for those looking to learn about neural network
+based key exchange:
+https://arxiv.org/pdf/1502.05153.pdf
+(Neural Synchronization based Secret Key Exchange over Public Channels: A survey)
+
+http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=88E9C139C857C057C62E602F0075424D?doi=10.1.1.220.8198&rep=rep1&type=pdf
+(Side-Channel Resistance Evaluation of a Neural Network Based Lightweight Cryptography Scheme)
+
+https://pdfs.semanticscholar.org/d291/f30e597f1ce9ec05100cb812a93f4786e344.pdf
+(Neural Synchronization Using Genetic Algorithm for Secure Key Establishment)
+
+https://ieeexplore.ieee.org/document/6707125
+(Authenticated key exchange protocol using neural cryptography with secret boundaries)
+
+https://www.ki.tu-berlin.de/fileadmin/fg135/publikationen/Ruttor_2006_GAN.pdf
+(Genetic attack on neural cryptography)
+
+http://www.cse.msu.edu/~leixinyu/Papers/TwoLayer2013.pdf
+(Two-layer tree-connected feed-forward neural network model for neural cryptography)
+
